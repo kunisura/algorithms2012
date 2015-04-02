@@ -8,8 +8,10 @@ introduced in:
   Finding All Solutions and Instances of Numberlink and Slitherlink by ZDDs,
   Algorithms 5(2), 176-213 (2012).](http://www.mdpi.com/1999-4893/5/2/176)
 
+You can also find an improved version of Numberlink solver (`ddnumlin`) in
+[TdZdd](https://github.com/kunisura/TdZdd).
 The Numberlink instance generator is available separately at
-[Jun Kawahara's repository](http://github.com/junkawahara/numberlink_gen).
+[Jun Kawahara's repository](https://github.com/junkawahara/numberlink_gen).
 
 ## Programs
 
