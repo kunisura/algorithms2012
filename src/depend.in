@@ -1,0 +1,64 @@
+znumlin.o: TdZdd.hpp TdZddHash.hpp TdZddNode.hpp \
+ TdZddList.hpp TdZddPool.hpp filter/AND.hpp TdZddPool.hpp \
+ filter/Degree0or2.hpp graph/Graph.hpp util/ShiftedArray.hpp \
+ filter/Degree2.hpp filter/NumlinFilter.hpp filter/NumOfItems.hpp \
+ graph/NumlinQuiz.hpp graph/GridGraph.hpp graph/Graph.hpp \
+ util/MessageHandler.hpp util/ResourceUsage.hpp
+zsligen.o: TdZdd.hpp TdZddHash.hpp TdZddNode.hpp \
+ TdZddList.hpp TdZddPool.hpp dd/cudd_BDD.hpp dd/ddutil.hpp \
+ util/MessageHandler.hpp util/ResourceUsage.hpp filter/DDBuilder.hpp \
+ filter/DDFilter.hpp TdZddPool.hpp filter/Degree0or2.hpp graph/Graph.hpp \
+ util/ShiftedArray.hpp filter/DegreeEven.hpp filter/LLNumOfItems.hpp \
+ filter/NumOfItems.hpp filter/UnivAbstract.hpp TdZdd.hpp \
+ filter/MinimalItems.hpp filter/NumOfItems.hpp filter/Simpath.hpp \
+ filter/ULNumOfItems.hpp graph/SlilinQuiz.hpp graph/GridGraph.hpp \
+ graph/Graph.hpp util/MessageHandler.hpp util/demangle.hpp
+zslilin.o: TdZdd.hpp TdZddHash.hpp TdZddNode.hpp \
+ TdZddList.hpp TdZddPool.hpp filter/AND.hpp TdZddPool.hpp \
+ filter/Degree0or2.hpp graph/Graph.hpp util/ShiftedArray.hpp \
+ filter/Simpath.hpp filter/SlilinFilter.hpp graph/SlilinQuiz.hpp \
+ graph/GridGraph.hpp graph/Graph.hpp filter/NumOfItems.hpp \
+ graph/SlilinQuiz.hpp util/MessageHandler.hpp util/ResourceUsage.hpp
+dd/cudd_BDD.o: dd/cudd_BDD.hpp dd/ddutil.hpp \
+ util/MessageHandler.hpp util/ResourceUsage.hpp
+filter/Degree0or2.o: filter/Degree0or2.hpp TdZddPool.hpp \
+ graph/Graph.hpp util/ShiftedArray.hpp
+filter/Degree2.o: filter/Degree2.hpp TdZddPool.hpp \
+ graph/Graph.hpp util/ShiftedArray.hpp
+filter/DegreeEven.o: filter/DegreeEven.hpp TdZddPool.hpp \
+ graph/Graph.hpp util/ShiftedArray.hpp
+filter/NumlinFilter.o: filter/NumlinFilter.hpp \
+ TdZddPool.hpp graph/Graph.hpp util/ShiftedArray.hpp
+filter/Simpath.o: filter/Simpath.hpp TdZddPool.hpp \
+ graph/Graph.hpp util/ShiftedArray.hpp
+filter/SlilinFilter.o: filter/SlilinFilter.hpp \
+ TdZddPool.hpp graph/SlilinQuiz.hpp graph/GridGraph.hpp graph/Graph.hpp \
+ util/ShiftedArray.hpp
+graph/Graph.o: graph/Graph.hpp
+graph/GridGraph.o: graph/GridGraph.hpp graph/Graph.hpp
+graph/NumlinQuiz.o: graph/NumlinQuiz.hpp \
+ graph/GridGraph.hpp graph/Graph.hpp
+graph/SlilinQuiz.o: graph/SlilinQuiz.hpp \
+ graph/GridGraph.hpp graph/Graph.hpp
+util/MessageHandler.o: util/MessageHandler.hpp \
+ util/ResourceUsage.hpp
+util/ResourceUsage.o: util/ResourceUsage.hpp
+util/demangle.o: util/demangle.hpp
+znumlin: znumlin.o \
+ filter/Degree0or2.o graph/Graph.o \
+ filter/Degree2.o filter/NumlinFilter.o \
+ graph/NumlinQuiz.o graph/GridGraph.o graph/Graph.o \
+ util/MessageHandler.o util/ResourceUsage.o
+zsligen: zsligen.o \
+ dd/cudd_BDD.o \
+ util/MessageHandler.o util/ResourceUsage.o \
+ filter/Degree0or2.o graph/Graph.o \
+ filter/DegreeEven.o \
+ filter/Simpath.o \
+ graph/SlilinQuiz.o graph/GridGraph.o \
+ graph/Graph.o util/MessageHandler.o util/demangle.o
+zslilin: zslilin.o \
+ filter/Degree0or2.o graph/Graph.o \
+ filter/Simpath.o filter/SlilinFilter.o graph/SlilinQuiz.o \
+ graph/GridGraph.o graph/Graph.o \
+ graph/SlilinQuiz.o util/MessageHandler.o util/ResourceUsage.o
